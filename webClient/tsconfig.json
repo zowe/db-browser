@@ -1,0 +1,12 @@
+{
+  "extends": "../../zlux-app-manager/virtual-desktop/plugin-config/tsconfig.base.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/**/*.ts",
+    "../zlux-platform/interface/src/index.d.ts",
+    "../zlux-platform/interface/src/mvd-hosting.d.ts"
+  ],
+  "compilerOptions":{    
+    "skipLibCheck": true
+  }
+}

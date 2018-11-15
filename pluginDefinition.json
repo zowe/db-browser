@@ -1,0 +1,44 @@
+{
+  "identifier": "org.zowe.dbbrowser",
+  "apiVersion": "1.0.0",
+  "pluginVersion": "1.0.0",
+  "pluginType": "application",
+  "webContent": {
+    "framework": "angular2",
+    "launchDefinition": {
+      "pluginShortNameKey": "dbbrowserTitle",
+      "pluginShortNameDefault": "db-browser",
+      "imageSrc": "assets/icon.png"
+    },
+    "descriptionKey": "dbbrowserDescription",
+    "descriptionDefault": "dbbrowser plugin",
+    "isSingleWindowApp": true,
+    "defaultWindowStyle": {
+      "width": 600,
+      "height": 700
+    }
+  },
+  "dataServices": [
+    {
+      "type": "import",
+      "sourceName": "data",
+      "localName": "subsystemsService",
+      "sourcePlugin": "org.zowe.zossystem.subsystems"
+    },
+    {
+      "type": "import",
+      "sourceName": "data",
+      "localName": "db2Service",
+      "sourcePlugin": "org.zowe.dbbrowser.db2"
+    }
+  ],
+  "configurationData": {
+    "resources": {
+      "dbname": {
+        "variable": true,
+        "locationType": "relative",
+        "aggregationPolicy": "override"
+      }
+    }
+  }
+}
