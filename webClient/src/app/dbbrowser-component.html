@@ -1,0 +1,185 @@
+
+<!-- 
+  This program and the accompanying materials are
+  made available under the terms of the Eclipse Public License v2.0 which accompanies
+  this distribution, and is available at https://www.eclipse.org/legal/epl-v20.html
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+  Copyright Contributors to the Zowe Project.
+-->
+
+<body style="background-color:ui-02">
+<label class = "title">
+Database  Browser
+</label>  
+ 
+<div class ="large-window-padding">
+ 
+  <div  class="row-in-flex margin-bottom-ten-px">
+    <div class = "row-in-flex dropdown-background width-35">
+    <ibm-dropdown #connectionDropDown class="bx--dropdown" style="order:1" type="single" placeholder="Select a connection" size="lg" 
+    	(selected)="onSelectConnection($event)">
+      
+      <ibm-dropdown-list class ="max-height-dropdown" [items]="connectionsDisplay">
+      </ibm-dropdown-list>
+    </ibm-dropdown>
+     <button ibmButton="ghost" size="md" style="order:2" (click)="addConnectionModal()" type="button">
+      Add    
+    </button>
+        
+     
+    </div>
+ 
+      
+      
+    <div class="column-in-flex">
+      <label label class = "bx--label">{{dbbrowserParameters==null?" ":dbbrowserParameters.address}}</label>
+      <button ibmButton="ghost" size="sm" (click)="changeSystemModal()">
+        Connect to system
+      </button>
+    </div>
+  </div>
+ 
+  <ibm-tabs >
+  	<ibm-tab  heading='New SQL Query' (selected)="showNewSQLContent()" [active]="true">
+    </ibm-tab>
+    <ibm-tab  heading='Recent Queries' (selected)="showRecentSQLContent()"[active]="false">
+    </ibm-tab>
+  </ibm-tabs>
+  
+  
+  
+  <div id = "queryArea" ibmTextArea class="dbbrowser-editor margin-top-ten-px margin-bottom-ten-px" (keyup)="checkEditor()"></div>
+
+  <button #sendQueryButton ibmButton="primary" class="margin-top-ten-px margin-bottom-ten-px" (click)="sendQuery()" value="Send">
+    Send Query
+  </button>
+
+ 
+  <div class="row-in-flex"> 
+  	<label label *ngIf="showResultTable " class="margin-left-ten-px standard-label">Results</label>
+    <button ibmButton="ghost" (click)="exportData()"  
+             *ngIf="showResultTable ">
+        Export
+       <svg width="16" height="16" class="bx--btn__icon" fill-rule="evenodd"><path d="M14.3 1h-3.8V0H16v5.5h-1V1.7L9.7 7 9 6.3 14.3 1z"></path><path d="M14.3 1h-3.8V0H16v5.5h-1V1.7L9.7 7 9 6.3 14.3 1z"></path><path d="M13 9h1v6c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h7v1H1v12h12V9z"></path></svg>
+      </button>
+   </div>
+   
+   
+  <ibm-table #ibmTable class = "bx--data-table-v2" [showSelectionColumn]="false" [striped]="false" size="md" (sort)="onColumnSort($event)" *ngIf="showResultTable" [model]="resultTableModel">  
+  
+  </ibm-table>
+  
+ 
+  <ibm-pagination *ngIf="showResultTable " [model]="paginationModel" (selectPage)="onPageSelect($event)">
+ 
+  </ibm-pagination>  
+   
+   
+  <div *ngIf="viewChangeSystemModal">
+    <ibm-modal #modal [size]="sm">
+      <form [formGroup]="profileForm" (ngSubmit)="connect()">
+
+      <ibm-modal-header class="change-system-label" (closeSelect)="changeSystemModal()">Connect to system</ibm-modal-header>
+        <section class="modal-body columnFlex">
+          <ibm-label class="padding-top-and-buttom-px" labelState="success">
+            <label  class = "standard-label ">Address</label>
+            <input type="text" class="bx--text-input" formControlName="zssAddress" >
+          </ibm-label>
+      
+          <ibm-label class="padding-top-and-buttom-px" labelState="success">
+            <label   class = "standard-label ">Username</label>
+            <input type="text" class="bx--text-input" formControlName="username">
+          </ibm-label>
+          
+          <ibm-label class="padding-top-and-buttom-px" labelState="success">
+            <label   class = "standard-label " >Password</label>
+            <input type="password" class="bx--text-input" formControlName="password">
+          </ibm-label>
+        </section>
+      <ibm-modal-footer >
+        <div class = "footer">
+        <button ibmButton="secondary" (click)="changeSystemModal()">Cancel</button>
+        <button ibmButton="primary" type="submit">Connect</button>
+        </div>
+      </ibm-modal-footer>
+              </form>
+
+    </ibm-modal> 
+  </div>
+
+  
+  <div *ngIf="viewAddConnectionModal">
+    <ibm-modal #modal [size]="md">
+      <form [formGroup]="profileForm" (ngSubmit)="addRemoteConnection()">
+      <ibm-modal-header class="change-system-label" (closeSelect)="addConnectionModal()">Add a connection</ibm-modal-header>
+        <section class="modal-body columnFlex">
+          <div  class="row-in-flex margin-bottom-ten-px">
+            <div class = "column-in-flex width-35 sm-window-padding">
+              <ibm-label class="padding-top-and-buttom-px" labelState="success">
+              <label  class = "standard-label ">Address</label>
+              <input type="text" class="bx--text-input" formControlName="address" >
+              </ibm-label>
+                 <ibm-label class="padding-top-and-buttom-px" labelState="success">
+                <label  class = "standard-label ">Database</label>
+                <input type="text" class="bx--text-input" formControlName="database" >
+              </ibm-label>
+          
+              <ibm-label class="padding-top-and-buttom-px" labelState="success">
+                <label   class = "standard-label ">Port</label>
+                <input type="text" class="bx--text-input" formControlName="port">
+              </ibm-label>
+        
+            </div>
+         
+            <div class = "column-in-flex width-35 sm-window-padding">
+              <ibm-label class="padding-top-and-buttom-px" labelState="success">
+                <label   class = "standard-label ">Nickname</label>
+                <input type="text" class="bx--text-input" formControlName="nickname">
+              </ibm-label>
+              
+              <ibm-label class="padding-top-and-buttom-px" labelState="success">
+                <label   class = "standard-label " >Username</label>
+                <input type="text" class="bx--text-input" formControlName="username">
+              </ibm-label>
+              
+              <ibm-label class="padding-top-and-buttom-px" labelState="success">
+                <label   class = "standard-label " >Password</label>
+                <input type="password" class="bx--text-input" formControlName="password">
+              </ibm-label>
+     
+            </div>
+          </div>
+        </section>
+      <ibm-modal-footer >
+        <div class = "footer">
+        <button ibmButton="secondary" (click)="addConnectionModal()">Cancel</button>
+        <button ibmButton="primary" type="submit">Add</button>
+        </div>
+      </ibm-modal-footer>
+      </form>
+    </ibm-modal> 
+  </div>
+
+  
+  <div class="dbbrowser-spinner-position bx--loading bx--loading--small" >
+      <svg *ngIf="resultNotReady" class="bx--loading__svg" viewBox="-75 -75 150 150">
+        <circle cx="0" cy="0" r="37.5" />
+      </svg>
+  </div>
+  
+  <zlux-popup-manager>
+  </zlux-popup-manager>
+</div>
+</body>
+
+<!-- 
+  This program and the accompanying materials are
+  made available under the terms of the Eclipse Public License v2.0 which accompanies
+  this distribution, and is available at https://www.eclipse.org/legal/epl-v20.html
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+  Copyright Contributors to the Zowe Project.
+-->

@@ -1,0 +1,47 @@
+{
+  "RocketSoftwareCopyright_Header" : [
+    "© 2014-2018 Rocket Software, Inc. or its affiliates. All Rights Reserved.",
+    "ROCKET SOFTWARE, INC. CONFIDENTIAL",
+    ""],
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "mvd-plugin-name"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "tsconfig": "tsconfig.app.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "lint": [
+    {
+      "project": "tsconfig.app.json"
+    }
+  ],
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+  ,"RocketSoftwareCopyright_Footer" : [
+    "© 2014-2018 Rocket Software, Inc. or its affiliates. All Rights Reserved.",
+    "ROCKET SOFTWARE, INC. CONFIDENTIAL",
+    ""]
+}

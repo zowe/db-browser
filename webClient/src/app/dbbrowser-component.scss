@@ -1,0 +1,130 @@
+
+:host ::ng-deep {
+
+  @import '/../../node_modules/carbon-components/scss/globals/scss/styles.scss';
+ 
+
+  @media screen and (min-width: 768px){
+    .bx--tabs__nav-item{background:transparent;padding:.75rem 0 .75rem}
+    .bx--tabs__nav-item+.bx--tabs__nav-item{margin-left:3rem}
+  }
+  
+  .title {
+    font-family: "ibm-plex-sans", Helvetica Neue, Arial, sans-serif;
+    width:100%;
+    height:2em;
+    background-color:#000;
+    color:#FFF;
+    font-size:1.5em;
+    padding-left:1.5em;
+    padding-top:0.5em;
+  }
+   
+  .width-35 {
+    width : 50%;
+  }
+
+  .dropdown-background *{
+    background-color: $field-01;
+  }
+  
+  .sm-window-padding {
+    padding: $spacing-sm;
+  }
+   
+  .large-window-padding {
+    padding: $spacing-lg;
+  }
+  .dbbrowser-editor {
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", "Droid Sans Mono", "Consolas", monospace;
+    font-size: 0.875rem;
+    width: 100%;
+    height: 10rem;
+    min-width: 10rem;
+    padding: 1rem;
+    color: #152935;
+    background-color: $field-02;
+    border: none;
+    box-shadow: 0 1px 0 0 #5a6872;
+    -ms-flex-order: 2;
+        order: 2;
+    resize: vertical;
+    border-bottom: 1px solid transparent;
+  }
+
+  .dbbrowser-spinner-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+ 
+  .height-40 {
+    height: 40px;
+  }
+    
+
+  .margin-top-ten-px {
+    margin-top: 10px;
+  }
+
+  .margin-left-ten-px {
+    margin-left: 10px;
+  }
+
+  .margin-bottom-ten-px {
+    margin-bottom: 10px;
+  }
+   
+   
+  .fixed-height-child {
+    /*order: 1;*/
+    flex: 0 0 auto;
+    min-height: 60px;
+    align-self: auto;
+  }
+ 
+  .row-in-flex{
+    display:flex;
+    justify-content: space-between; 
+    flex-direction:row;
+    align-items:center;
+  }
+ 
+   
+  .column-in-flex{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+  }
+
+  .padding-top-and-buttom-px {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  
+  .max-height-dropdown ul{
+   max-height:20em;
+  }
+  
+  .padding-tabs ul{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  
+  .change-system-label {
+    font-family: "ibm-plex-sans", Helvetica Neue, Arial, sans-serif;
+    font-size:2em;
+    font-weight:400;
+  } 
+
+  .standard-label {
+    font-family: "ibm-plex-sans", Helvetica Neue, Arial, sans-serif;
+    font-size:1em;
+    font-weight:400;
+  }   
+}
