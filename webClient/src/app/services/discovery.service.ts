@@ -34,7 +34,7 @@ export class DiscoveryService extends XhrBase<DiscoveryTable> {
   }
 
   connect():Observable<any> {
-    let url = ZoweZLUX.uriBroker.serverRootUri("proxiedHostInfo");
+    let url = ZoweZLUX.uriBroker.serverRootUri("server/proxies");
     let result = this.http
       .get(url, XhrBase.getHeaders())
       .map((response: Response) => response.json())
