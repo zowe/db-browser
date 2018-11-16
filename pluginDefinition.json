@@ -23,7 +23,7 @@
       "type": "import",
       "sourceName": "data",
       "localName": "subsystemsService",
-      "sourcePlugin": "org.zowe.zossystem.subsystems"
+      "sourcePlugin": "com.rs.zossystem.subsystems"
     },
     {
       "type": "import",
