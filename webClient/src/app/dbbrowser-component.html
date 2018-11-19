@@ -18,7 +18,8 @@ Database  Browser
  
   <div  class="row-in-flex margin-bottom-ten-px">
     <div class = "row-in-flex dropdown-background width-35">
-    <ibm-dropdown #connectionDropDown class="bx--dropdown" style="order:1" type="single" data-i18n="[placeholder]" placeholder="Select a connection" size="lg" 
+    <ibm-dropdown #connectionDropDown class="bx--dropdown" style="order:1" type="single" placeholder="Select a connection"
+    i18n-placeholder="search placeholder|Placeholder for select conn@@select-conn-placeholder"     size="lg" 
     	(selected)="onSelectConnection($event)">
       
       <ibm-dropdown-list class ="max-height-dropdown" [items]="connectionsDisplay">
@@ -42,9 +43,10 @@ Database  Browser
   </div>
  
   <ibm-tabs >
-  	<ibm-tab heading='New SQL Query' i18n="heading title|Title of new SQL query heading@@new-SQL-query" (selected)="showNewSQLContent()" [active]="true">
+  	<ibm-tab heading='New SQL Query' i18n-heading="search heading|Heading for new sql@@new-sql-heading"   (selected)="showNewSQLContent()" [active]="true">
     </ibm-tab>
-    <ibm-tab heading='Recent Queries' i18n="heading title|Title of recent queries heading@@recent-queries-title" (selected)="showRecentSQLContent()"[active]="false">
+    <ibm-tab heading='Recent Queries' i18n-heading="search heading|Heading for recent sql@@recent-sql-heading"
+    (selected)="showRecentSQLContent()"[active]="false">
     </ibm-tab>
   </ibm-tabs>
 
@@ -59,12 +61,12 @@ Database  Browser
  
   <div class="row-in-flex" *ngIf="showResultTable "> 
   	<label label   class="margin-left-ten-px standard-label" i18n="label|Label for result@@result-label">Results</label>
-    <button ibmButton="ghost" (click)="exportData()">
-        Export
-           <svg width="16" height="16" class="bx--btn__icon" fill-rule="evenodd"><path d="M14.3 1h-3.8V0H16v5.5h-1V1.7L9.7 7 9 6.3 14.3 1z"></path><path d="M14.3 1h-3.8V0H16v5.5h-1V1.7L9.7 7 9 6.3 14.3 1z"></path><path d="M13 9h1v6c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h7v1H1v12h12V9z"></path></svg>
-      </button>
+    <button #exportButton ibmButton="ghost" (click)="exportData()" i18n="button title|Title of export button@@export-button">
+      Export
+    <!-- TODO not sure why this is not working. inline svg would cause errors for internationalization <img src="/ZLUX/plugins/org.zowe.dbbrowser/web/assets/launch.svg"/>  -->
+    </button>
     
-   </div>
+  </div>
    
    
   <ibm-table #ibmTable class = "bx--data-table-v2" [showSelectionColumn]="false" [striped]="false" size="md" (sort)="onColumnSort($event)" *ngIf="showResultTable" [model]="resultTableModel">  

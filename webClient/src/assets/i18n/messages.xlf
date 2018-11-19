@@ -25,13 +25,22 @@ Database  Browser
         <note priority="1" from="description">Label for apptitle</note>
         <note priority="1" from="meaning">label</note>
       </trans-unit>
+      <trans-unit id="select-conn-placeholder" datatype="html">
+        <source>Select a connection</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder for select conn</note>
+        <note priority="1" from="meaning">search placeholder</note>
+      </trans-unit>
       <trans-unit id="add-connection-button-title" datatype="html">
         <source>
       Add    
     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
         <note priority="1" from="description">Title of add connection button</note>
         <note priority="1" from="meaning">button title</note>
@@ -42,30 +51,28 @@ Database  Browser
       </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">39</context>
         </context-group>
         <note priority="1" from="description">Title of connect to system button</note>
         <note priority="1" from="meaning">button title</note>
       </trans-unit>
-      <trans-unit id="new-SQL-query" datatype="html">
-        <source>
-    </source>
+      <trans-unit id="new-sql-heading" datatype="html">
+        <source>New SQL Query</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">46</context>
         </context-group>
-        <note priority="1" from="description">Title of new SQL query heading</note>
-        <note priority="1" from="meaning">heading title</note>
+        <note priority="1" from="description">Heading for new sql</note>
+        <note priority="1" from="meaning">search heading</note>
       </trans-unit>
-      <trans-unit id="recent-queries-title" datatype="html">
-        <source>
-    </source>
+      <trans-unit id="recent-sql-heading" datatype="html">
+        <source>Recent Queries</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">48</context>
         </context-group>
-        <note priority="1" from="description">Title of recent queries heading</note>
-        <note priority="1" from="meaning">heading title</note>
+        <note priority="1" from="description">Heading for recent sql</note>
+        <note priority="1" from="meaning">search heading</note>
       </trans-unit>
       <trans-unit id="send-query-button-title" datatype="html">
         <source>
@@ -73,7 +80,7 @@ Database  Browser
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">57</context>
         </context-group>
         <note priority="1" from="description">Title of send query button</note>
         <note priority="1" from="meaning">button title</note>
@@ -82,16 +89,30 @@ Database  Browser
         <source>Results</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">61</context>
+          <context context-type="linenumber">63</context>
         </context-group>
         <note priority="1" from="description">Label for result</note>
         <note priority="1" from="meaning">label</note>
+      </trans-unit>
+      <trans-unit id="export-button" datatype="html">
+        <source>
+      Export
+       <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+
+    
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Title of export button</note>
+        <note priority="1" from="meaning">button title</note>
       </trans-unit>
       <trans-unit id="connect-to-system-label" datatype="html">
         <source>Connect to system</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">88</context>
         </context-group>
         <note priority="1" from="description">Label for connect to system</note>
         <note priority="1" from="meaning">label</note>
@@ -100,11 +121,11 @@ Database  Browser
         <source>Address</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">91</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">121</context>
+          <context context-type="linenumber">125</context>
         </context-group>
         <note priority="1" from="description">Label for address</note>
         <note priority="1" from="meaning">label</note>
@@ -113,11 +134,11 @@ Database  Browser
         <source>Username</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">96</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">143</context>
+          <context context-type="linenumber">147</context>
         </context-group>
         <note priority="1" from="description">Label for username</note>
         <note priority="1" from="meaning">label</note>
@@ -126,11 +147,11 @@ Database  Browser
         <source>Password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">97</context>
+          <context context-type="linenumber">101</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">148</context>
+          <context context-type="linenumber">152</context>
         </context-group>
         <note priority="1" from="description">Label for password</note>
         <note priority="1" from="meaning">label</note>
@@ -139,11 +160,11 @@ Database  Browser
         <source>Cancel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">103</context>
+          <context context-type="linenumber">107</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">157</context>
+          <context context-type="linenumber">161</context>
         </context-group>
         <note priority="1" from="description">Title of cancel button</note>
         <note priority="1" from="meaning">button title</note>
@@ -152,7 +173,7 @@ Database  Browser
         <source>Connect</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">104</context>
+          <context context-type="linenumber">108</context>
         </context-group>
         <note priority="1" from="description">Title of connect button</note>
         <note priority="1" from="meaning">button title</note>
@@ -161,7 +182,7 @@ Database  Browser
         <source>Add a connection</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">116</context>
+          <context context-type="linenumber">120</context>
         </context-group>
         <note priority="1" from="description">Label for add a connection</note>
         <note priority="1" from="meaning">label</note>
@@ -170,7 +191,7 @@ Database  Browser
         <source>Database</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">125</context>
+          <context context-type="linenumber">129</context>
         </context-group>
         <note priority="1" from="description">Label for database</note>
         <note priority="1" from="meaning">label</note>
@@ -179,7 +200,7 @@ Database  Browser
         <source>Port</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">130</context>
+          <context context-type="linenumber">134</context>
         </context-group>
         <note priority="1" from="description">Label for port</note>
         <note priority="1" from="meaning">label</note>
@@ -188,7 +209,7 @@ Database  Browser
         <source>Nickname</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">138</context>
+          <context context-type="linenumber">142</context>
         </context-group>
         <note priority="1" from="description">Label for nickname</note>
         <note priority="1" from="meaning">label</note>
@@ -197,7 +218,7 @@ Database  Browser
         <source>Add</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
-          <context context-type="linenumber">158</context>
+          <context context-type="linenumber">162</context>
         </context-group>
         <note priority="1" from="description">Title of add button</note>
         <note priority="1" from="meaning">button title</note>
