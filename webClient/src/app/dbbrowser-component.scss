@@ -9,7 +9,7 @@
 */
 
 :host ::ng-deep {
-
+  $font-path: '../../node_modules/carbon-components/src/globals/fonts';
   @import '/../../node_modules/carbon-components/scss/globals/scss/styles.scss';
  
 
