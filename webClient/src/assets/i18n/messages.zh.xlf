@@ -40,7 +40,7 @@ Database  Browser
         <source>
       Add    
     </source><target state="new">
-      创建    
+      添加    
     </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
@@ -84,7 +84,7 @@ Database  Browser
         <source>
     Send Query
   </source><target state="new">
-    发送
+    发送请求
   </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
@@ -104,14 +104,9 @@ Database  Browser
       </trans-unit><trans-unit id="export-button" datatype="html">
         <source>
       Export
-       <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>
-
     
     </source><target state="new">
-      导出
-       <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>
-
-    
+      导出    
     </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
@@ -126,71 +121,71 @@ Database  Browser
         
         <note priority="1" from="description">Label for connect to system</note>
         <note priority="1" from="meaning">label</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">88</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">86</context></context-group></trans-unit>
       <trans-unit id="address-label" datatype="html">
         <source>Address</source><target state="new">地址</target>
         
         
         <note priority="1" from="description">Label for address</note>
         <note priority="1" from="meaning">label</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">91</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">125</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">89</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">123</context></context-group></trans-unit>
       <trans-unit id="username-label" datatype="html">
         <source>Username</source><target state="new">用户名</target>
         
         
         <note priority="1" from="description">Label for username</note>
         <note priority="1" from="meaning">label</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">96</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">147</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">94</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">145</context></context-group></trans-unit>
       <trans-unit id="password-label" datatype="html">
         <source>Password</source><target state="new">密码</target>
         
         
         <note priority="1" from="description">Label for password</note>
         <note priority="1" from="meaning">label</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">101</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">152</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">99</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">150</context></context-group></trans-unit>
       <trans-unit id="cancel-button-title" datatype="html">
         <source>Cancel</source><target state="new">取消</target>
         
         
         <note priority="1" from="description">Title of cancel button</note>
         <note priority="1" from="meaning">button title</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">107</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">161</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">105</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">159</context></context-group></trans-unit>
       <trans-unit id="connect-button-title" datatype="html">
         <source>Connect</source><target state="new">连接</target>
         
         <note priority="1" from="description">Title of connect button</note>
         <note priority="1" from="meaning">button title</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">108</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">106</context></context-group></trans-unit>
       <trans-unit id="add-connection-label" datatype="html">
-        <source>Add a connection</source><target state="new">创建新连接</target>
+        <source>Add a connection</source><target state="new">添加新连接</target>
         
         <note priority="1" from="description">Label for add a connection</note>
         <note priority="1" from="meaning">label</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">120</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">118</context></context-group></trans-unit>
       <trans-unit id="database-label" datatype="html">
         <source>Database</source><target state="new">数据库名</target>
         
         <note priority="1" from="description">Label for database</note>
         <note priority="1" from="meaning">label</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">129</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">127</context></context-group></trans-unit>
       <trans-unit id="port-label" datatype="html">
         <source>Port</source><target state="new">端口</target>
         
         <note priority="1" from="description">Label for port</note>
         <note priority="1" from="meaning">label</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">134</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">132</context></context-group></trans-unit>
       <trans-unit id="nickname-label" datatype="html">
-        <source>Nickname</source><target state="new">连接名</target>
+        <source>Connection Name</source><target state="new">连接名</target>
         
         <note priority="1" from="description">Label for nickname</note>
         <note priority="1" from="meaning">label</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">142</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">140</context></context-group></trans-unit>
       <trans-unit id="add-button-title" datatype="html">
-        <source>Add</source><target state="new">创建</target>
+        <source>Add</source><target state="new">添加</target>
         
         <note priority="1" from="description">Title of add button</note>
         <note priority="1" from="meaning">button title</note>
-      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">162</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">160</context></context-group></trans-unit>
     </body>
   </file>
 </xliff>
