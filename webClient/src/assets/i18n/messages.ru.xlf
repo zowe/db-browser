@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="ru">
+    <body>
+      <trans-unit id="paginator" datatype="html">
+        <source>of</source><target state="new">of</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@zlux/widgets/components/paginator/paginator.component.d.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@zlux/widgets/components/paginator/paginator.component.d.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">of preposition in clause n-m of total</note>
+      </trans-unit><trans-unit id="apptitle-label" datatype="html">
+        <source>
+Database  Browser
+</source><target state="new">
+Браузер базы данных
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Label for apptitle</note>
+        <note priority="1" from="meaning">label</note>
+      </trans-unit><trans-unit id="select-conn-placeholder" datatype="html">
+        <source>Select a connection</source><target state="new">Выбрать соединение</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder for select conn</note>
+        <note priority="1" from="meaning">search placeholder</note>
+      </trans-unit><trans-unit id="add-connection-button-title" datatype="html">
+        <source>
+      Add    
+    </source><target state="new">
+      Добавить
+    </target>
+        
+        <note priority="1" from="description">Title of add connection button</note>
+        <note priority="1" from="meaning">button title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">28</context></context-group></trans-unit><trans-unit id="connect-to-system-button-title" datatype="html">
+        <source>
+        Connect to system
+      </source><target state="new">
+         Подключиться к системе
+      </target>
+        
+        <note priority="1" from="description">Title of connect to system button</note>
+        <note priority="1" from="meaning">button title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">39</context></context-group></trans-unit><trans-unit id="new-sql-heading" datatype="html">
+        <source>New SQL Query</source><target state="new">Новый SQL запрос</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Heading for new sql</note>
+        <note priority="1" from="meaning">search heading</note>
+      </trans-unit><trans-unit id="recent-sql-heading" datatype="html">
+        <source>Recent Queries</source><target state="new">Недавние запросы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <note priority="1" from="description">Heading for recent sql</note>
+        <note priority="1" from="meaning">search heading</note>
+      </trans-unit><trans-unit id="send-query-button-title" datatype="html">
+        <source>
+    Send Query
+  </source><target state="new">
+    Отправить запрос
+  </target>
+        
+        <note priority="1" from="description">Title of send query button</note>
+        <note priority="1" from="meaning">button title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">57</context></context-group></trans-unit><trans-unit id="result-label" datatype="html">
+        <source>Results</source><target state="new">Результаты</target>
+        
+        <note priority="1" from="description">Label for result</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">63</context></context-group></trans-unit><trans-unit id="export-button" datatype="html">
+        <source>
+      Export
+    
+    </source><target state="new">
+      Экспортировать
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dbbrowser-component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Title of export button</note>
+        <note priority="1" from="meaning">button title</note>
+      </trans-unit><trans-unit id="connect-to-system-label" datatype="html">
+        <source>Connect to system</source><target state="new">Подключиться к системе</target>
+        
+        <note priority="1" from="description">Label for connect to system</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">86</context></context-group></trans-unit><trans-unit id="address-label" datatype="html">
+        <source>Address</source><target state="new">Адрес</target>
+        
+        
+        <note priority="1" from="description">Label for address</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">89</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">123</context></context-group></trans-unit><trans-unit id="username-label" datatype="html">
+        <source>Username</source><target state="new">Имя пользователя</target>
+        
+        
+        <note priority="1" from="description">Label for username</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">94</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">145</context></context-group></trans-unit><trans-unit id="password-label" datatype="html">
+        <source>Password</source><target state="new">Пароль</target>
+        
+        
+        <note priority="1" from="description">Label for password</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">99</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">150</context></context-group></trans-unit><trans-unit id="cancel-button-title" datatype="html">
+        <source>Cancel</source><target state="new">Отменить</target>
+        
+        
+        <note priority="1" from="description">Title of cancel button</note>
+        <note priority="1" from="meaning">button title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">105</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">159</context></context-group></trans-unit><trans-unit id="connect-button-title" datatype="html">
+        <source>Connect</source><target state="new">Соединиться</target>
+        
+        <note priority="1" from="description">Title of connect button</note>
+        <note priority="1" from="meaning">button title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">106</context></context-group></trans-unit><trans-unit id="add-connection-label" datatype="html">
+        <source>Add a connection</source><target state="new">Добавить подключение</target>
+        
+        <note priority="1" from="description">Label for add a connection</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">118</context></context-group></trans-unit><trans-unit id="database-label" datatype="html">
+        <source>Database</source><target state="new">База данных</target>
+        
+        <note priority="1" from="description">Label for database</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">127</context></context-group></trans-unit><trans-unit id="port-label" datatype="html">
+        <source>Port</source><target state="new">Порт</target>
+        
+        <note priority="1" from="description">Label for port</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">132</context></context-group></trans-unit><trans-unit id="nickname-label" datatype="html">
+        <source>Connection Name</source><target state="new">Название соединения</target>
+        
+        <note priority="1" from="description">Label for nickname</note>
+        <note priority="1" from="meaning">label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">140</context></context-group></trans-unit><trans-unit id="add-button-title" datatype="html">
+        <source>Add</source><target state="new">Добавить</target>
+        
+        <note priority="1" from="description">Title of add button</note>
+        <note priority="1" from="meaning">button title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/dbbrowser-component.ts</context><context context-type="linenumber">160</context></context-group></trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -10,7 +10,7 @@
 -->
 
 <body style="background-color:ui-02">
-<label class = "title">
+<label class = "title" i18n="label|Label for apptitle@@apptitle-label">
 Database  Browser
 </label>  
  
@@ -18,13 +18,14 @@ Database  Browser
  
   <div  class="row-in-flex margin-bottom-ten-px">
     <div class = "row-in-flex dropdown-background width-35">
-    <ibm-dropdown #connectionDropDown class="bx--dropdown" style="order:1" type="single" placeholder="Select a connection" size="lg" 
+    <ibm-dropdown #connectionDropDown class="bx--dropdown" style="order:1" type="single" placeholder="Select a connection"
+    i18n-placeholder="search placeholder|Placeholder for select conn@@select-conn-placeholder"     size="lg" 
     	(selected)="onSelectConnection($event)">
       
       <ibm-dropdown-list class ="max-height-dropdown" [items]="connectionsDisplay">
       </ibm-dropdown-list>
     </ibm-dropdown>
-     <button ibmButton="ghost" size="md" style="order:2" (click)="addConnectionModal()" type="button">
+     <button ibmButton="ghost" size="md" style="order:2" i18n="button title|Title of add connection button@@add-connection-button-title" (click)="addConnectionModal()" type="button">
       Add    
     </button>
         
@@ -34,37 +35,38 @@ Database  Browser
       
       
     <div class="column-in-flex">
-      <label label class = "bx--label">{{dbbrowserParameters==null?" ":dbbrowserParameters.address}}</label>
-      <button ibmButton="ghost" size="sm" (click)="changeSystemModal()">
+      <label label class = "bx--label" >{{dbbrowserParameters==null?" ":dbbrowserParameters.address}}</label>
+      <button ibmButton="ghost" size="sm" i18n="button title|Title of connect to system button@@connect-to-system-button-title" (click)="changeSystemModal()">
         Connect to system
       </button>
     </div>
   </div>
  
   <ibm-tabs >
-  	<ibm-tab  heading='New SQL Query' (selected)="showNewSQLContent()" [active]="true">
+  	<ibm-tab heading='New SQL Query' i18n-heading="search heading|Heading for new sql@@new-sql-heading"   (selected)="showNewSQLContent()" [active]="true">
     </ibm-tab>
-    <ibm-tab  heading='Recent Queries' (selected)="showRecentSQLContent()"[active]="false">
+    <ibm-tab heading='Recent Queries' i18n-heading="search heading|Heading for recent sql@@recent-sql-heading"
+    (selected)="showRecentSQLContent()"[active]="false">
     </ibm-tab>
   </ibm-tabs>
-  
-  
-  
+
   <div id = "queryArea" ibmTextArea class="dbbrowser-editor margin-top-ten-px margin-bottom-ten-px" (keyup)="checkEditor()"></div>
 
-  <button #sendQueryButton ibmButton="primary" class="margin-top-ten-px margin-bottom-ten-px" (click)="sendQuery()" value="Send">
+  <button #sendQueryButton ibmButton="primary" class="margin-top-ten-px margin-bottom-ten-px" 
+  i18n="button title|Title of send query button@@send-query-button-title" 
+  (click)="sendQuery()" value="Send">
     Send Query
   </button>
 
  
-  <div class="row-in-flex"> 
-  	<label label *ngIf="showResultTable " class="margin-left-ten-px standard-label">Results</label>
-    <button ibmButton="ghost" (click)="exportData()"  
-             *ngIf="showResultTable ">
-        Export
-       <svg width="16" height="16" class="bx--btn__icon" fill-rule="evenodd"><path d="M14.3 1h-3.8V0H16v5.5h-1V1.7L9.7 7 9 6.3 14.3 1z"></path><path d="M14.3 1h-3.8V0H16v5.5h-1V1.7L9.7 7 9 6.3 14.3 1z"></path><path d="M13 9h1v6c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h7v1H1v12h12V9z"></path></svg>
-      </button>
-   </div>
+  <div class="row-in-flex" *ngIf="showResultTable "> 
+  	<label label   class="margin-left-ten-px standard-label" i18n="label|Label for result@@result-label">Results</label>
+    <button #exportButton ibmButton="ghost" (click)="exportData()" i18n="button title|Title of export button@@export-button">
+      Export
+    <!-- TODO not sure why this is not working. inline svg would cause errors for internationalization <img src="/ZLUX/plugins/org.zowe.dbbrowser/web/assets/launch.svg"/>  -->
+    </button>
+    
+  </div>
    
    
   <ibm-table #ibmTable class = "bx--data-table-v2" [showSelectionColumn]="false" [striped]="false" size="md" (sort)="onColumnSort($event)" *ngIf="showResultTable" [model]="resultTableModel">  
@@ -81,27 +83,27 @@ Database  Browser
     <ibm-modal #modal [size]="sm">
       <form [formGroup]="profileForm" (ngSubmit)="connect()">
 
-      <ibm-modal-header class="change-system-label" (closeSelect)="changeSystemModal()">Connect to system</ibm-modal-header>
+      <ibm-modal-header class="change-system-label" i18n="label|Label for connect to system@@connect-to-system-label" (closeSelect)="changeSystemModal()">Connect to system</ibm-modal-header>
         <section class="modal-body columnFlex">
           <ibm-label class="padding-top-and-buttom-px" labelState="success">
-            <label  class = "standard-label ">Address</label>
+            <label  class = "standard-label " i18n="label|Label for address@@address-label">Address</label>
             <input type="text" class="bx--text-input" formControlName="zssAddress" >
           </ibm-label>
       
-          <ibm-label class="padding-top-and-buttom-px" labelState="success">
-            <label   class = "standard-label ">Username</label>
+          <ibm-label class="padding-top-and-buttom-px"  labelState="success">
+            <label   class = "standard-label " i18n="label|Label for username@@username-label">Username</label>
             <input type="text" class="bx--text-input" formControlName="username">
           </ibm-label>
           
-          <ibm-label class="padding-top-and-buttom-px" labelState="success">
-            <label   class = "standard-label " >Password</label>
+          <ibm-label class="padding-top-and-buttom-px"  labelState="success">
+            <label   class = "standard-label " i18n="label|Label for password@@password-label">Password</label>
             <input type="password" class="bx--text-input" formControlName="password">
           </ibm-label>
         </section>
       <ibm-modal-footer >
         <div class = "footer">
-        <button ibmButton="secondary" (click)="changeSystemModal()">Cancel</button>
-        <button ibmButton="primary" type="submit">Connect</button>
+        <button ibmButton="secondary" i18n="button title|Title of cancel button@@cancel-button-title"  (click)="changeSystemModal()">Cancel</button>
+        <button ibmButton="primary" i18n="button title|Title of connect button@@connect-button-title" type="submit">Connect</button>
         </div>
       </ibm-modal-footer>
               </form>
@@ -113,21 +115,21 @@ Database  Browser
   <div *ngIf="viewAddConnectionModal">
     <ibm-modal #modal [size]="md">
       <form [formGroup]="profileForm" (ngSubmit)="addRemoteConnection()">
-      <ibm-modal-header class="change-system-label" (closeSelect)="addConnectionModal()">Add a connection</ibm-modal-header>
+      <ibm-modal-header class="change-system-label" i18n="label|Label for add a connection@@add-connection-label" (closeSelect)="addConnectionModal()">Add a connection</ibm-modal-header>
         <section class="modal-body columnFlex">
           <div  class="row-in-flex margin-bottom-ten-px">
             <div class = "column-in-flex width-35 sm-window-padding">
               <ibm-label class="padding-top-and-buttom-px" labelState="success">
-              <label  class = "standard-label ">Address</label>
+              <label  class = "standard-label " i18n="label|Label for address@@address-label">Address</label>
               <input type="text" class="bx--text-input" formControlName="address" >
               </ibm-label>
                  <ibm-label class="padding-top-and-buttom-px" labelState="success">
-                <label  class = "standard-label ">Database</label>
+                <label  class = "standard-label " i18n="label|Label for database@@database-label">Database</label>
                 <input type="text" class="bx--text-input" formControlName="database" >
               </ibm-label>
           
               <ibm-label class="padding-top-and-buttom-px" labelState="success">
-                <label   class = "standard-label ">Port</label>
+                <label   class = "standard-label " i18n="label|Label for port@@port-label">Port</label>
                 <input type="text" class="bx--text-input" formControlName="port">
               </ibm-label>
         
@@ -135,17 +137,17 @@ Database  Browser
          
             <div class = "column-in-flex width-35 sm-window-padding">
               <ibm-label class="padding-top-and-buttom-px" labelState="success">
-                <label   class = "standard-label ">Nickname</label>
+                <label   class = "standard-label " i18n="label|Label for nickname@@nickname-label">Connection Name</label>
                 <input type="text" class="bx--text-input" formControlName="nickname">
               </ibm-label>
               
               <ibm-label class="padding-top-and-buttom-px" labelState="success">
-                <label   class = "standard-label " >Username</label>
+                <label   class = "standard-label " i18n="label|Label for username@@username-label">Username</label>
                 <input type="text" class="bx--text-input" formControlName="username">
               </ibm-label>
               
               <ibm-label class="padding-top-and-buttom-px" labelState="success">
-                <label   class = "standard-label " >Password</label>
+                <label   class = "standard-label " i18n="label|Label for password@@password-label">Password</label>
                 <input type="password" class="bx--text-input" formControlName="password">
               </ibm-label>
      
@@ -154,8 +156,8 @@ Database  Browser
         </section>
       <ibm-modal-footer >
         <div class = "footer">
-        <button ibmButton="secondary" (click)="addConnectionModal()">Cancel</button>
-        <button ibmButton="primary" type="submit">Add</button>
+        <button ibmButton="secondary" i18n="button title|Title of cancel button@@cancel-button-title" (click)="addConnectionModal()">Cancel</button>
+        <button ibmButton="primary" i18n="button title|Title of add button@@add-button-title" type="submit">Add</button>
         </div>
       </ibm-modal-footer>
       </form>
