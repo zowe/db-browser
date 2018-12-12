@@ -23,13 +23,15 @@
       "type": "import",
       "sourceName": "data",
       "localName": "subsystemsService",
-      "sourcePlugin": "org.zowe.zossystem.subsystems"
+      "sourcePlugin": "org.zowe.zossystem.subsystems",
+      "versionRange": "^1.0.0"
     },
     {
       "type": "import",
       "sourceName": "data",
       "localName": "db2Service",
-      "sourcePlugin": "org.zowe.dbbrowser.db2"
+      "sourcePlugin": "org.zowe.dbbrowser.db2",
+      "versionRange": "^1.0.0"
     }
   ],
   "configurationData": {
