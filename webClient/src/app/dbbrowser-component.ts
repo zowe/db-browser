@@ -146,22 +146,7 @@ export class DbBrowserComponent implements OnInit, AfterViewInit {
       readOnly: true // false if this command should not apply in readOnly mode
     });
     
-    if (this.launchMetadata != null && this.launchMetadata.data) {
-      this.dbbrowserParameters = null;
-      var metadata = this.launchMetadata.data;
-      switch (metadata.type) {
-      case "launch":{
-        this.dbbrowserParameters = metadata.dbbrowserParameters;
-        let dbbrowserTitle = "DB-Browser, Connected to : " + this.dbbrowserParameters.address;
-        this.windowAction.setTitle(dbbrowserTitle);
-        break;
-      }
-       default:
-        
-      }
-    } else {
-      this.dbbrowserParameters={};
-      this.discoveryService.connect().subscribe(
+    this.discoveryService.connect().subscribe(
         result => {
           if(result.zssServerHostName && result.zssPort){
             this.profileForm.patchValue({
@@ -176,10 +161,61 @@ export class DbBrowserComponent implements OnInit, AfterViewInit {
           logger.warn('Fail to connect to proxy server ');
         }
        } 
-      );
-      this.changeSystemModal();
-
-      
+    );
+    
+    if (this.launchMetadata != null && this.launchMetadata.data) {
+      this.dbbrowserParameters = null;
+      var metadata = this.launchMetadata.data;
+      switch (metadata.type) {
+      case "launch":{
+        this.dbbrowserParameters = metadata.dbbrowserParameters;
+        if (this.dbbrowserParameters && 
+          this.dbbrowserParameters.user &&
+          this.dbbrowserParameters.pass &&
+          this.dbbrowserParameters.database &&
+          this.dbbrowserParameters.address &&
+          this.dbbrowserParameters.port &&
+          this.dbbrowserParameters.nickname )
+          {
+            
+            let displayName = this.dbbrowserParameters.nickname + " @" + this.dbbrowserParameters.address;
+            
+            let connection = {
+              key:this.dbbrowserParameters.nickname,
+              content:displayName,
+              isManuallyAdded:true,
+              selected:true,
+            }
+          
+            let config = {
+              "username":this.dbbrowserParameters.user,
+              "password":this.dbbrowserParameters.pass,
+              "database":this.dbbrowserParameters.database,
+              "address":this.dbbrowserParameters.address,
+              "port":this.dbbrowserParameters.port
+            } 
+            this.connectionsDisplay.push(connection);
+            this.manuallyAddedConnections.set(this.dbbrowserParameters.nickname,config);   
+            this.manuallyAddedConnectionsDisplay.push(connection);
+                         
+            if (this.connectionDropDown && this.connectionDropDown.view){
+              this.connectionDropDown.view.updateList(this.connectionsDisplay);
+              this.connectionDropDown.view.propagateSelected([connection]);
+            }
+            
+            this.isConnectionSelected=true;
+          }
+        
+        let dbbrowserTitle = "DB-Browser, Connected to : " + this.dbbrowserParameters.address;
+        this.windowAction.setTitle(dbbrowserTitle);
+        break;
+      }
+       default:
+        
+      }
+    } else {
+      this.dbbrowserParameters={};
+      this.changeSystemModal();      
       this.configService.executeGetQuery(this.PATH, this.INSTANCE, this.DEFAULT_PORT_FILE)
         .map(res=>res.json())
         .subscribe(
