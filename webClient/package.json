@@ -41,7 +41,7 @@
     "json-loader": "~0.5.7",
     "ngx-i18nsupport": "~0.17.1",
     "raw-loader": "~0.5.1",
-    "node-sass": "~4.9.4",
+    "node-sass": "~4.13.1",
     "rxjs": "~6.2.2",
     "rxjs-compat": "~6.2.2",
     "sass-loader": "~7.1.0",
